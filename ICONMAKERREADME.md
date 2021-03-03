@@ -10,8 +10,8 @@ icon_dict = { first_row : first_ten,
                  }
 ```
 
-Then, the user in prompted for each line. A function is in place to ensure that ten digits are entered and that they are 
-0s and 1s (and any mistaken entry is treated as 1).
+Then, the user is prompted for each line. A function is in place to ensure that ten digits are entered and that they are 
+0s and 1s (any mistaken entry is treated as 1).
 ```
 first_input = input('Let\'s start with the first row of 10.: ')
     wheeler(first_input,first_ten)
@@ -20,7 +20,7 @@ first_input = input('Let\'s start with the first row of 10.: ')
     wheeler(tenth_input,tenth_ten)
 ```
 
-Once entered, the results were display:
+Once entered, the results will display:
 ![icon_example](https://user-images.githubusercontent.com/78517588/109739769-23c09080-7b98-11eb-83b4-686aa5953ba7.png)
 
 
