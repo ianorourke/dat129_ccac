@@ -51,24 +51,24 @@ def sorter(dictionary,sub_dict):
         print(count,') ',report,' : ',dictionary[sub_dict][report],sep='')
 ```
 This provides the following menu of options:
-!(https://user-images.githubusercontent.com/78517588/109880831-67250880-7c45-11eb-81ff-383cec65b132.png)
+![Menu Options](https://user-images.githubusercontent.com/78517588/109880831-67250880-7c45-11eb-81ff-383cec65b132.png)
 
 In response to the initial inquiry question, the results from the .csv appear as follows:
 
-!(https://user-images.githubusercontent.com/78517588/109881168-d00c8080-7c45-11eb-9b32-e6292f024bd0.png)
+![Company Option](https://user-images.githubusercontent.com/78517588/109881168-d00c8080-7c45-11eb-9b32-e6292f024bd0.png)
 
 US STEEL CORP appears to have the highest amount of recorded incidents at 8315.
 
-!(https://user-images.githubusercontent.com/78517588/109881311-14981c00-7c46-11eb-8563-890219c6b209.png)
+![Chemical List](https://user-images.githubusercontent.com/78517588/109881311-14981c00-7c46-11eb-8563-890219c6b209.png)
 
 TOULENE and XYLENE appear to be the chemicals most reported at 3452 and 3804 incidents respectively.
 However, it may be worth nothing that LEAD and LEAD COMPOUNDS, while smaller individually, do add to more than 4800.
 
-!(https://user-images.githubusercontent.com/78517588/109881521-6fca0e80-7c46-11eb-84c9-bbe261e7f430.png)
+![Chemical List](https://user-images.githubusercontent.com/78517588/109881521-6fca0e80-7c46-11eb-84c9-bbe261e7f430.png)
 
 Looking at industries per NAICS code:
 
-!(https://user-images.githubusercontent.com/78517588/109881638-a2740700-7c46-11eb-9b9b-1c262d228cdd.png)
+![Industry List](https://user-images.githubusercontent.com/78517588/109881638-a2740700-7c46-11eb-9b9b-1c262d228cdd.png)
 
 The largest appears to be industry code 325510 at 10226 incidents.
 ![Per the NAICS manual as of 2017,](https://www.census.gov/naics/reference_files_tools/2017_NAICS_Manual.pdf)
@@ -76,7 +76,7 @@ this would be Chemical Manufacturing : Paint and Coating Manufacturing.
 
 Looking at general subsectors though:
 
-!(https://user-images.githubusercontent.com/78517588/109882043-3cd44a80-7c47-11eb-805b-0c4e8630c076.png)
+![Subsector List](https://user-images.githubusercontent.com/78517588/109882043-3cd44a80-7c47-11eb-805b-0c4e8630c076.png)
 
 Subsectors 325 and 331 appear to be the highest which, ![per the NAICS manual as of 2017,](https://www.census.gov/naics/reference_files_tools/2017_NAICS_Manual.pdf)
 refers to the subsectors of Chemical Manufacturing and Primary Metal Manufacturing respectively.
