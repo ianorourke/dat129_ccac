@@ -21,7 +21,8 @@ first_input = input('Let\'s start with the first row of 10.: ')
 ```
 
 Once entered, the results were display:
-![Example of Generated Icon](/dat129_ccac/icon_example.png)
+![icon_example](https://user-images.githubusercontent.com/78517588/109739769-23c09080-7b98-11eb-83b4-686aa5953ba7.png)
+
 
 Then a menu will appear with a list of options in which the generated icon can be adjusted.
 ```
@@ -37,10 +38,13 @@ icon_maker(icon_dict)
         option_input = input('\nPlease select an option. ')
 ```
 These options include 'Reverse' which swaps 0s with 1s and 1s with 0s to produce a negative-like image.
-![Example of Reverse Option](/dat129_ccac/reverse_example.png)
+![reverse_example](https://user-images.githubusercontent.com/78517588/109739598-df34f500-7b97-11eb-985e-84a0047e5693.png)
+
 
 'Invert' which inverts the order of entries to show a mirror-like image.
-![Example of Invert Option](/dat129_ccac/invert_example.png)
+![invert_example](https://user-images.githubusercontent.com/78517588/109739621-e6f49980-7b97-11eb-91e6-2294815e8da0.png)
+
 
 And 'Scale' which can scale the icon from 1-9x.
-![Example of Scale Option](/dat129_ccac/scale_example.png)
+![scale_example](https://user-images.githubusercontent.com/78517588/109739646-eeb43e00-7b97-11eb-87d0-e99edb19583e.png)
+
