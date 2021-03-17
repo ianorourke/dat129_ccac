@@ -33,21 +33,28 @@ to sort through data as needed without taxing memory.
 
 To show in a very basic way how these work, let's show an example in a small quiz program.
 Here we have a very rudimentary function with yield statements.
+
 ![Generator Function Example](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex1.png)
+
 For this, we have the answers listed in this function as different results that are kept in place using yield statements.
 
 ![Generator Example 2](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex2.png)
+
 In the main, we have the statements printed that list the questions which next() in place for each result set
 previous using yield statements. A variable is set for convenience to call the results of the generator function.
 
 ![Generator Example 3](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex3.png)
+
 As we see, each result is appearing individually. Rather than running the function each time, which can use more memory,
 these results are only appear as needed.
 
 ![Generator Example 4](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex4.png)
+
 Until we reach the end. And if we were to add an additional next() that exceeds the yield statements we've set for
 the generator function, we get:
+
 ![Generator Example 5](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex5.png)
+
 A StopIteration letting us know that the function is terminated at this point.
 
 Arguably, there are certainly other way a quiz program could be put together, but as you can see from the placement
