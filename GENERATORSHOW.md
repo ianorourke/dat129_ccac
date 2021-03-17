@@ -45,6 +45,7 @@ For this, we have the answers listed in this function as different results that 
 In the main, we have the statements printed that list the questions which next() in place for each result set
 previous using yield statements. A variable is set for convenience to call the results of the generator function.
 
+![Generator Example a](https://github.com/ianorourke/dat129_ccac/blob/main/generator_exa.png)
 ![Generator Example 3](https://github.com/ianorourke/dat129_ccac/blob/main/generator_ex3.png)
 
 As we see, each result is appearing individually. Rather than running the function each time, which can use more memory,
