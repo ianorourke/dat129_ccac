@@ -3,7 +3,9 @@
 ## Sources
 
 [How To Use Generators and yield in Python](https://realpython.com/introduction-to-python-generators/)
+
 [PEP 255 -- Simple Generators](https://www.python.org/dev/peps/pep-0255/)
+
 [Programiz Python Generators](https://www.programiz.com/python-programming/generator)
 
 Deitel, P. J., & Deitel, H. M. (2020). Intro to Python for computer science and data science: Learning to program with AI, 
