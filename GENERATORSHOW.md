@@ -13,7 +13,7 @@ big data and the cloud. Upper Saddle River, NJ: Pearson.
 
 ## Generator Basics
 
-Per Programiz, generators, which can be functions or expression, return (or more accurately "yield" as we will see) objects
+Per Programiz, generators, which can be functions or expressions, return (or more accurately "yield" as we will see) objects
 that can be iterated one value at a time, in contrast to a list comprehension that will produce an entire list. These
 objects can looped over using for statements as well but their advantage is that through "lazy evaluation", generators
 make less use of memory and this can make them useful when dealing with larger files.
