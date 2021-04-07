@@ -4,10 +4,7 @@
 
 [National Weather Service](https://www.weather.gov/)
 [Maps & Geographical Information](https://www.statelibrary.pa.gov/GeneralPublic/Learn/Genealogy-and-Local-History/Pages/Maps--Geographical-Information.aspx)
-
-(to provide some context)
 Peer learning sources:
-
 [Lambda Functions as explained by Rachael Shockey](https://github.com/rachaelshockey/peer_teaching_lambda)
 [Line Comprehensions as explained by Alissa Horton](https://github.com/ahort0bCCAC/dat129_ccac/blob/main/peerTeaching_Comprehensions.py)
 [Additional sources for lambda functions:](https://www.geeksforgeeks.org/python-min-max-value-in-float-string-list/)
