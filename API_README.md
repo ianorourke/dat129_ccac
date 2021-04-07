@@ -4,11 +4,13 @@
 
 [National Weather Service](https://www.weather.gov/)
 [Maps & Geographical Information](https://www.statelibrary.pa.gov/GeneralPublic/Learn/Genealogy-and-Local-History/Pages/Maps--Geographical-Information.aspx)
+
 (to provide some context)
 Peer learning sources:
+
 [Lambda Functions as explained by Rachael Shockey](https://github.com/rachaelshockey/peer_teaching_lambda)
 [Line Comprehensions as explained by Alissa Horton](https://github.com/ahort0bCCAC/dat129_ccac/blob/main/peerTeaching_Comprehensions.py)
-Additional sources for lambda functions:(https://www.geeksforgeeks.org/python-min-max-value-in-float-string-list/)
+[Additional sources for lambda functions:](https://www.geeksforgeeks.org/python-min-max-value-in-float-string-list/)
 And as always:
 Deitel, P. J., & Deitel, H. M. (2020). Intro to Python for computer science and data science: Learning to program with AI, 
 big data and the cloud. Upper Saddle River, NJ: Pearson.
@@ -133,6 +135,7 @@ Here, additional lambda functions were used to generate the minimum and maximum 
 ```
 
 From here, the results could now be generated.
+
 ![Min and max elevation, total, average, and note of exclusions](https://github.com/ianorourke/dat129_ccac/blob/a61532068c9eaf961622c11b5a499064f0c0a857/api1.png)
 
 And for more meaningful results with which to answer the initial inquiry question, an additional
@@ -172,6 +175,7 @@ def range_isolator(raw_list,ft_min,ft_range):
     
 ```
 Producing these results:
+
 ![Ranges of elevation](https://github.com/ianorourke/dat129_ccac/blob/a61532068c9eaf961622c11b5a499064f0c0a857/api2.png)
 
 From the results generated here, out of a total of 928 (including Oxford, which was excluded from the average due to no value
@@ -187,7 +191,9 @@ Initially, a menu system was planned to navigate through the data for the user b
 functions could also potentially be added as the list of all 928 entries with station ID, location, and elevation are compiled
 but limitations prevent an easy scrolling through the list. A zip function was created for that data to display for the user
 and the results appear as so:
-(https://github.com/ianorourke/dat129_ccac/blob/a61532068c9eaf961622c11b5a499064f0c0a857/api3.png)
+
+![ID:Location:Elevation](https://github.com/ianorourke/dat129_ccac/blob/a61532068c9eaf961622c11b5a499064f0c0a857/api3.png)
+
 Potentially, a generator function of a sort could be used to display the list at smaller increments by user choice but that could not
 be completely implemented at this time.
 
