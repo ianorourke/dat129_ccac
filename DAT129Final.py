@@ -13,6 +13,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+# Define functions.
 def menu_spinner(menu_list):
     '''Nicely displays a menu for information to access.'''
     counter = 0
@@ -20,7 +21,7 @@ def menu_spinner(menu_list):
         counter += 1
         print(counter,') ',option,sep='')
 
-# Define functions.
+
 def input_scanner(user_input,ref_list):
     '''Readies user input for request by ensuring it as a valid state code.'''
     # Ensures user's input will be set to lowercase to access the list.
@@ -74,13 +75,19 @@ def tri_displayer(list_one,list_two,list_three):
 
 def individ_alerter(user_input,state_list):
     '''Pulls alerts for one state/territory and provides a brief report.'''
+    # Verifies input matches a correct code.
     state_pick = input_scanner(user_input,state_list)
+    # Sends code with API request.
     indiv_alerts = alert_grabber(state_pick)
+    # Digging through the dictionary.
     indiv_specs = indiv_alerts['features']
+    # Digging further through the dictionary for the relevant info.
     pot_o_gold = list_comprehender(indiv_specs,'properties')
+    # Lists containing the relevant info.
     severities = lambda_mat(pot_o_gold,'severity')
     timedates = lambda_mat(pot_o_gold,'effective')
     headlines = lambda_mat(pot_o_gold,'headline')
+    # Displays the alerts.
     tri_displayer(severities,timedates,headlines)
 
 def yes_or_no(user_answer,state_list):
@@ -90,25 +97,16 @@ def yes_or_no(user_answer,state_list):
     wheel = True
     while wheel != False:
         if new_answer == 'y':
+            print('\nLet\'s get the current alerts from each state and territory now!')
+            print('This may take a moment...')
             weather_gather(state_list)
             wheel = False
+            print('Done! A JSON containing current alerts is now available!')
         elif new_answer == 'n':
             wheel = False
             print('\nLet\'s look at the current data then.')
         else:
             new_answer = input('\nInvalid. Try again with \'y\' or \'n\': ')
-
-def yes_or_no_two(user_answer,state_list):
-    '''Prepares user request to pull data from all states.'''
-    next_answer = user_answer.lower()
-    next_wheel = True
-    while next_wheel != False:
-        if next_answer == 'y':
-            next_wheel = False
-        elif next_answer == 'n':
-            next_wheel = False
-        else:
-            next_answer = input('\nInvalid. Try again with \'y\' or \'n\': ')
            
 def weather_gather(state_list):
     '''Pulls weather data and places it in as JSON.'''
@@ -121,7 +119,10 @@ def weather_gather(state_list):
         alert_specs = alerter['features']
         grab_bag = list_comprehender(alert_specs,'properties')
         state_data_list.append(grab_bag)
-    # Writes the completed data from into a JSON.
+    # Writes the completed data from into a JSON. Originally appended
+    # but due to issues with the JSON containing multiple objects, a
+    # new list is written to file rather than appended as per suggestion
+    # during office hours.
     with open('state_weather_data.json','w') as filer:
         json.dump(state_data_list,filer)
 
@@ -137,6 +138,8 @@ def key_refinery(pre_refined,empty_list,particular_key):
         refined = item[particular_key]
         empty_list.append(refined)   
 
+# Following two functions were created when .readlines() was used to
+# attempt to parse through the JSON.
 def json_arranger(json_ore,empty_list,sought_str):
     '''Arranges info from the json and sorts them into relevant lists.'''
     for json_metal in json_ore:
@@ -152,6 +155,7 @@ def list_stripper(old_list,empty_list,extra_bits):
         
 def graph_maker(dictionary):
     '''Makes a matplotlib graph from values set in a dictionary.'''
+    # Splitting keys and values for graph axes.
     ratings = list(dictionary.keys())
     counts = list(dictionary.values())
     avg_wrath = np.mean(counts)
@@ -163,6 +167,7 @@ def graph_maker(dictionary):
 
 def date_counter(date_list):
     '''Arranges a list of dates with counts. Made specifically for alert dates.'''
+    # Preparing counts for display.
     four_count = 0
     five_count = 0
     six_count = 0
@@ -174,6 +179,8 @@ def date_counter(date_list):
     twel_count = 0
     other_count = 0
     
+    # Currently an arbitrary date range intended for demonstration.
+    # Future versions may include drawing from saved datetimes instead.
     for item in date_list:
         if '05-04' in item:
             four_count += 1
@@ -208,6 +215,7 @@ def date_counter(date_list):
     
 def type_counter(type_list):
     '''Sorts a list into types. Made specifically for weather severities.'''
+    # Preparing counts for the alerts of each severity type.
     min_count = 0
     mod_count = 0
     sev_count = 0
@@ -239,7 +247,11 @@ def type_counter(type_list):
                  'Extreme':ex_count,
                  'Other':other_count}
     
+    # Displays graph of the alert types last pulled.
     graph_maker(plot_dict)
+    # Readying counts for potential stats analysis. Longer workarounds used
+    # when .describe() and other more convenient functions did not appear to
+    # provide any results.
     total_counts = [min_count,mod_count,sev_count,unk_count,ex_count,other_count]
     stats_grabber(total_counts)
     
@@ -283,7 +295,7 @@ def main():
     main_menu = ['See individual weather alerts by state/territory',
                  'Create JSON containing current alerts for the day',
                  'Access currently stored JSON',
-                 'Compare and analyze current data',
+                 'Analyze current data',
                  'Save current data to .csv',
                  'End program']
     
